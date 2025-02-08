@@ -55,18 +55,31 @@ canvas{
 
 }
 form{
-    background-color: white;
-    width: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 50vw;
     margin: auto;
     margin-top: 200px;
     padding: 10px 20px;
+    min-width: 200px;
     border-radius: 20px;
 
 }
 #search{
     border-radius: 20px;
-    margin: auto;
+    width: 40vw;
+    height: 30px;
+    margin: 20px;
 
+}
+label{
+    background-color: white;
+
+    margin: auto;
+    padding: 5px 10px;
+    border-radius: 20px;
+    
 }
 
 footer{
