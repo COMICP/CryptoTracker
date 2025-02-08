@@ -1,0 +1,12 @@
+import { buildPage, buildgraph } from "./partialbuilder";
+const xValues = [0, 1, 2, 3, 4, 5];
+const yValues = [0, 1, 4, 9, 16, 25];
+buildPage();
+buildgraph(xValues, yValues);
+buildgraph(xValues, yValues);
+buildgraph(xValues, yValues);
+buildgraph(xValues, yValues);
+buildgraph(xValues, yValues);
+buildgraph(xValues, yValues);
+buildgraph(xValues, yValues);
+buildgraph(xValues, yValues);
