@@ -1,3 +1,3 @@
-import { buildPage, buildgraph } from "./partialbuilder";
+import { buildPage } from "./partialbuilder";
 
 buildPage();
