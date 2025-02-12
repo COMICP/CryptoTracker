@@ -94,13 +94,14 @@ header h1{
 }
 #detailResults h2{
     margin: 6% 20vw ;
-    font-size: 3rem;
+ 
     padding: 5px 10px; 
     border-radius: 20px;
     background-color: white;
+    max-width: 70vw ;
 }
 
-canvas{
+#detailResults canvas, #detailResults p {
     width: 80%;
     padding: 20px;
     background-color: white;
