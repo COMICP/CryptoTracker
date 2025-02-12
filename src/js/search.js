@@ -35,6 +35,7 @@ export async function handleSearch(query) {
     const header = document.createElement("h2");
     header.innerHTML = query;
     detailResults.appendChild(header);
+    detailResults.appendChild(document.createElement("br"))
 
     // Extract timestamps and prices for the graph
     const timestamps = results.prices.map(item => item[0]);
