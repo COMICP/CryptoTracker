@@ -1,4 +1,4 @@
-import { buildPage, buildDetailsGrid } from "./partialbuilder";
+import { buildPage, buildDetailsGrid } from "./partialbuilder.js";
 import { handleSearch } from "./search.js";
 const xValues = [0, 1, 2, 3, 4, 5];
 const yValues = [0, 1, 4, 9, 16, 25];

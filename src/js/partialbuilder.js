@@ -1,4 +1,4 @@
-import { buildFinanceArray } from "./financemath";
+import { buildFinanceArray } from "./financemath.js";
 function buildHeader() {
   const header = document.getElementById("header");
   const title = document.createElement("h1");

@@ -1,4 +1,4 @@
-import {drawLineGraph} from "./partialbuilder";
+import {drawLineGraph} from "./partialbuilder.js";
 
 // Function to fetch data from the API based on the search term
 export async function fetchData(searchTerm) {
