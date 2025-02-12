@@ -1,5 +1,5 @@
-//stock market broad https://api.polygon.io/v2/aggs/grouped/locale/us/market/stocks/2023-10-02?adjusted=true&include_otc=false&apiKey=j5ivxkwvobflEKX1na6tVmPwcNniC1Db
 
+//object for the crypto array
 function convertCryptoToObject(crypto) {
   const object = {
     id: crypto.id,
@@ -11,7 +11,7 @@ function convertCryptoToObject(crypto) {
   };
   return object;
 }
-
+//takes array of crypto and converts it into objects more usable in the program
 function convertCryptoArray(cryptoArray) {
   const convertedArray = [];
 
@@ -21,6 +21,8 @@ function convertCryptoArray(cryptoArray) {
 
   return convertedArray;
 }
+
+// gets crypto from api
 async function getCrypto() {
   const url =
     "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=layer-1";

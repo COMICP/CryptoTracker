@@ -39,24 +39,6 @@ function handleUrlChange() {
   }
 }
 
-const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyB5bR4nX3bKHpA8kmqRicsQ-zHvyTCIBBE";
-const data = {
-  contents: [{
-    parts: [{ text: "Explain how AI works" }]
-  }]
-};
-
-fetch(url, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify(data)
-})
-.then(response => response.json())
-.then(result => console.log(result))
-.catch(error => console.error("Error:", error));
-
 // Add event listener to handle back/forward navigation
 window.addEventListener("popstate", handleUrlChange);
 

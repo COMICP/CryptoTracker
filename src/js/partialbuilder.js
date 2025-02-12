@@ -95,7 +95,7 @@ export function drawLineGraph(canvas, xValues, yValues) {
   }
 }
 
-
+//template for the info about the cryptos 
 function buildInfoDiv(item) {
   const infodiv = `<a href="/search?search=${item.id}">
                 <div class="info">
@@ -126,7 +126,7 @@ function addFadeInEffect() {
     observer.observe(element);
   });
 }
-
+//renders crypto array with template
 function renderListWithTemplate(
   templateFn,
   parentElement,
@@ -140,7 +140,7 @@ function renderListWithTemplate(
   }
   parentElement.insertAdjacentHTML(position, htmlStrings.join(""));
 }
-
+//builds grid for page
 export async function buildDetailsGrid(element) {
   try {
     const list = await buildFinanceArray(); // Await the Promise to get the array

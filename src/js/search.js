@@ -20,7 +20,7 @@ export async function fetchData(searchTerm) {
       return [];
     }
   }
-
+//takes crypto and asks ai for information 
   async function getAIExplanation(query) {
     const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyB5bR4nX3bKHpA8kmqRicsQ-zHvyTCIBBE";
     const data = {
