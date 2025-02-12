@@ -3,7 +3,7 @@ function buildHeader() {
   const header = document.getElementById("header");
   const title = document.createElement("h1");
 
-  title.innerHTML = "Crypto and Stock Tracker";
+  title.innerHTML = "Crypto Tracker";
   header.appendChild(title);
 }
 function buildFooter() {
@@ -59,12 +59,24 @@ export function drawLineGraph(canvas, xValues, yValues) {
 
   // Draw the line graph with color coding
   for (let i = 1; i < xValues.length; i++) {
-    const x1 = marginLeft + ((xValues[i - 1] - minX) / (maxX - minX)) * (width - marginLeft - marginRight);
+    const x1 =
+      marginLeft +
+      ((xValues[i - 1] - minX) / (maxX - minX)) *
+        (width - marginLeft - marginRight);
     const y1 =
-      height - marginBottom - ((yValues[i - 1] - minY) / (maxY - minY)) * (height - marginTop - marginBottom);
-    const x2 = marginLeft + ((xValues[i] - minX) / (maxX - minX)) * (width - marginLeft - marginRight);
+      height -
+      marginBottom -
+      ((yValues[i - 1] - minY) / (maxY - minY)) *
+        (height - marginTop - marginBottom);
+    const x2 =
+      marginLeft +
+      ((xValues[i] - minX) / (maxX - minX)) *
+        (width - marginLeft - marginRight);
     const y2 =
-      height - marginBottom - ((yValues[i] - minY) / (maxY - minY)) * (height - marginTop - marginBottom);
+      height -
+      marginBottom -
+      ((yValues[i] - minY) / (maxY - minY)) *
+        (height - marginTop - marginBottom);
 
     ctx.beginPath();
     ctx.moveTo(x1, y1);
@@ -83,19 +95,29 @@ export function drawLineGraph(canvas, xValues, yValues) {
   // Draw the x values (dates) with some spacing
   const labelSpacing = Math.floor(xValues.length / 10);
   for (let i = 0; i < xValues.length; i += labelSpacing) {
-    const x = marginLeft + ((xValues[i] - minX) / (maxX - minX)) * (width - marginLeft - marginRight);
-    ctx.fillText(new Date(xValues[i]).toLocaleDateString(), x - 5, height - marginBottom + 20);
+    const x =
+      marginLeft +
+      ((xValues[i] - minX) / (maxX - minX)) *
+        (width - marginLeft - marginRight);
+    ctx.fillText(
+      new Date(xValues[i]).toLocaleDateString(),
+      x - 5,
+      height - marginBottom + 20
+    );
   }
 
   // Draw the y values (prices) with proper spacing
   const yLabelSpacing = Math.floor((maxY - minY) / 5);
   for (let i = minY; i <= maxY; i += yLabelSpacing) {
-    const y = height - marginBottom - ((i - minY) / (maxY - minY)) * (height - marginTop - marginBottom);
+    const y =
+      height -
+      marginBottom -
+      ((i - minY) / (maxY - minY)) * (height - marginTop - marginBottom);
     ctx.fillText(i.toFixed(2), marginLeft - 40, y + 5);
   }
 }
 
-//template for the info about the cryptos 
+//template for the info about the cryptos
 function buildInfoDiv(item) {
   const infodiv = `<a href="/search?search=${item.id}">
                 <div class="info">
