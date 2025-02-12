@@ -44,10 +44,10 @@ async function getCrypto() {
 // Sort an array of objects by a specific value
 function sortObjectsByValue(arr) {
   //console.log("Before sorting:", arr);
-  const sortedArray = arr.sort((a, b) => {
+  const sortedArray = arr.sort((a, b) => 
     //console.log(`Comparing ${a.percentdaychange} and ${b.percentdaychange}`);
-    return b.marketcap - a.marketcap;
-  });
+     b.marketcap - a.marketcap
+  );
   //console.log("After sorting:", sortedArray);
   return sortedArray;
 }
