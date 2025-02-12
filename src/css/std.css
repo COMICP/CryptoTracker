@@ -2,6 +2,21 @@
 :root{
     background-color: #3D3D3D;
 }
+/* styles.css */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+
 h1, h2, label{
     font-family: 'Comfortaa';
 }
@@ -21,13 +36,13 @@ header h1{
 }
 #performers{
     width: fit-content;
-    min-width: 500px;
+
     max-width: 80vw;
     margin: auto;
 
 }
 #gdiv{
-width: 100%;
+
 
     display: flex;
     flex-wrap: wrap;
@@ -36,6 +51,11 @@ width: 100%;
     padding: 0;
     margin: auto;
     margin-top: 30px;
+}
+#gdiv a {
+    font-style: normal;
+    text-decoration: none;
+    color: black;
 }
 #performers h2{
     background-color: white;
@@ -46,14 +66,38 @@ width: 100%;
     margin: auto;
     margin-top: 100px;
 }
-canvas{
+.info{
     background-color: white;
     padding: 20px;
     border-radius: 20px;
     width: 200px;
     margin: 10px;
-
+    opacity: 0; 
+    transition: opacity 1s ease-in, transform 0.3s ease, box-shadow 0.3s ease; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 1); 
 }
+
+
+.info:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 255, 0, 1);
+  }
+#detailResults{
+    display: flex;
+    justify-content: center;
+}
+
+canvas{
+    width: 80vw;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow:0px 4px 12px black;
+}
+.info.fade-in {
+    opacity: 1; 
+}
+
 form{
     display: flex;
     justify-content: center;
